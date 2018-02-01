@@ -1,4 +1,7 @@
+from django.contrib.auth import logout as auth_logout
+from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
+from django.urls import reverse
 
 
 class HamyarHomeView(TemplateView):
@@ -63,3 +66,8 @@ class SearchView(TemplateView):
 
 class SendMessageView(TemplateView):
     template_name = 'hamyar/Send_Message.html'
+
+
+def logout(request):
+    auth_logout(request)
+    return HttpResponseRedirect(reverse('madadju-home'))

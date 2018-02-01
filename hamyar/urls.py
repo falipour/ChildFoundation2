@@ -18,4 +18,5 @@ urlpatterns = [
     path('pay-receipt/', PayReceiptView.as_view(), name='pay-receipt'),
     path('search/', SearchView.as_view(), name='search'),
     path('send-message/', SendMessageView.as_view(), name='send-message'),
+    path('logout/', logout, name='hamyar-logout')
 ]
