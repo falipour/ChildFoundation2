@@ -4,9 +4,9 @@ from .views import *
 from karbar.views import login
 
 urlpatterns = [
-    path('hamyar/', include('hamyar.urls', namespace="hamyar")),
-    path('madadju/', include('madadju.urls', namespace="madadju")),
-    path('madadkar/', include('hamyar.urls', namespace="madadkar")),
+    path('hamyar/', include('hamyar.urls'), name="hamyar"),
+    path('madadju/', include('madadju.urls'), name='madadju'),
+    path('madadkar/', include('madadkar.urls'), name='madadkar'),
     path('modir/', include('modir.urls'), name='modir'),
     path('', home, name='home'),
     path('chart/', chart, name='chart'),
