@@ -70,4 +70,4 @@ class SendMessageView(TemplateView):
 
 def logout(request):
     auth_logout(request)
-    return HttpResponseRedirect(reverse('madadju-home'))
+    return HttpResponseRedirect(reverse('home'))

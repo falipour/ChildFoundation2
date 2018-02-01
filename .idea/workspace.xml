@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d891f5c9-772c-4860-af75-8703e4a1616a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ChildFoundation2.iml" afterPath="$PROJECT_DIR$/.idea/ChildFoundation2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySite/templates/MySite/Hamyar_Register.html" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Hamyar_Register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySite/templates/MySite/base.html" afterPath="$PROJECT_DIR$/MySite/templates/MySite/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySite/views.py" afterPath="$PROJECT_DIR$/MySite/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hamyar/templates/hamyar/Base.html" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hamyar/urls.py" afterPath="$PROJECT_DIR$/hamyar/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hamyar/views.py" afterPath="$PROJECT_DIR$/hamyar/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karbar/views.py" afterPath="$PROJECT_DIR$/karbar/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modir/admin.py" afterPath="$PROJECT_DIR$/modir/admin.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,40 +20,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hamyar/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="67" column="31" lean-forward="false" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hamyar/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/karbar/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -102,12 +66,14 @@
         <option value="$PROJECT_DIR$/ChildFoundation2/urls.py" />
         <option value="$PROJECT_DIR$/MySite/urls.py" />
         <option value="$PROJECT_DIR$/hamyar/admin.py" />
-        <option value="$PROJECT_DIR$/MySite/views.py" />
         <option value="$PROJECT_DIR$/MySite/templates/MySite/Hamyar_Register.html" />
         <option value="$PROJECT_DIR$/MySite/templates/MySite/base.html" />
         <option value="$PROJECT_DIR$/karbar/views.py" />
-        <option value="$PROJECT_DIR$/hamyar/views.py" />
         <option value="$PROJECT_DIR$/hamyar/urls.py" />
+        <option value="$PROJECT_DIR$/MySite/views.py" />
+        <option value="$PROJECT_DIR$/hamyar/views.py" />
+        <option value="$PROJECT_DIR$/hamyar/templates/hamyar/Base.html" />
+        <option value="$PROJECT_DIR$/modir/admin.py" />
       </list>
     </option>
   </component>
@@ -164,17 +130,7 @@
             <path>
               <item name="ChildFoundation2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChildFoundation2" type="462c0819:PsiDirectoryNode" />
-              <item name="hamyar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChildFoundation2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChildFoundation2" type="462c0819:PsiDirectoryNode" />
-              <item name="karbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChildFoundation2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChildFoundation2" type="462c0819:PsiDirectoryNode" />
-              <item name="MySite" type="462c0819:PsiDirectoryNode" />
+              <item name="modir" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -248,13 +204,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2253635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2463651" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3562586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.086657494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -572,14 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hamyar/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MySite/templates/MySite/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -609,14 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MySite/templates/MySite/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="914">
-          <caret line="75" column="97" lean-forward="false" selection-start-line="75" selection-start-column="97" selection-end-line="75" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MySite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -627,38 +566,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MySite/views.py">
+    <entry file="file://$PROJECT_DIR$/hamyar/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="41" column="38" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="41" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/karbar/views.py">
+    <entry file="file://$PROJECT_DIR$/hamyar/templates/hamyar/Base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
+        <state relative-caret-position="174">
+          <caret line="86" column="40" lean-forward="false" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hamyar/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="67" column="31" lean-forward="false" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+        <state relative-caret-position="447">
+          <caret line="72" column="41" lean-forward="false" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hamyar/urls.py">
+    <entry file="file://$PROJECT_DIR$/MySite/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        <state relative-caret-position="357">
+          <caret line="84" column="67" lean-forward="false" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MySite/templates/MySite/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="51" column="46" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/karbar/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modir/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hamyar/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="27" />
           <folding />
         </state>
       </provider>
