@@ -1,0 +1,73 @@
+{% extends 'hamyar/base.html' %}
+
+{% block title %}
+    هدایای غیر نقدی
+{% endblock %}
+
+{% block content %}
+
+
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
+                        <h3 style="font-family: 'B Nazanin';">هدایای غیرنقدی</h3>
+                        <br>
+                        <form style="font-family: 'B Nazanin'; font-size: 20px;">
+                            <p style="color: #7a0134;"> &nbsp&nbspنام کاربری
+                                <br>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#popUpWindow"
+                                        style="color: white; background-color: #3f001f; border-radius: 8px;">تائید
+                                </button>
+                                &nbsp &nbsp
+                                <input type="text" name="id" style=" border-radius: 8px; border-style: ridge;">
+                                <br>
+                                <br>
+
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--pop-up window-->
+    <div class="modal fade" id="popUpWindow">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-right">لیست هدایا</h3>
+                </div>
+
+                <!-- body (form) -->
+                <textarea class="form-control text-right" rows="5" id="comment"></textarea>
+
+                <!-- button -->
+                <div class="modal-footer">
+                    <button class="btn btn-primary btn-block" style="background: #850032">ثبت</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--menue toggle script-->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed")
+        });
+    </script>
+
+</div>
+{% endblock %}

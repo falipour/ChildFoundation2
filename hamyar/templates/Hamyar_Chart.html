@@ -1,0 +1,63 @@
+{% extends 'hamyar/base.html' %}
+
+{% block title %}
+   چارت سازمانی
+{% endblock %}
+
+{% block content %}
+ <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
+                        <h3 style="font-family: 'B Nazanin';">انتخاب مددجو</h3>
+                        <br>
+                        <form style="font-family: 'B Nazanin'; font-size: 20px;">
+                            <p style="color: #7a0134;"> &nbsp&nbspنام کاربری مددجو
+                                <br>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#Kefalat"
+                                        style="color: white; background-color: #3f001f; border-radius: 8px;">تائید
+                                </button>
+                                &nbsp &nbsp
+                                <input type="text" name="id" style=" border-radius: 8px; border-style: ridge;">
+                                <br>
+                                <br>
+
+                            </p>
+                            <div class="modal fade" id="Kefalat">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+
+                                        <!-- body (form) -->
+                                        <div class="modal-body">
+                                            <p class="text-right">
+                                                .مددجوی مورد نظر تحت حمایت شما قرار گرفت
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--menue toggle script-->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed")
+        });
+    </script>
+
+</div>
+
+
+</body>
+{% endblock %}

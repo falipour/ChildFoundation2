@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'modir',
     'madadkar',
     'madadju',
+    'hamyar',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
