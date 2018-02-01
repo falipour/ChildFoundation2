@@ -1,4 +1,9 @@
 from django.views.generic import TemplateView
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from django.contrib.auth.decorators import login_required
+from .forms import HamyarForm
+from .models import Hamyar
 
 
 class HamyarHomeView(TemplateView):
@@ -63,3 +68,20 @@ class SearchView(TemplateView):
 
 class SendMessageView(TemplateView):
     template_name = 'hamyar/Send_Message.html'
+
+# @login_required
+# def edit_profile(request):
+#     user = request.user
+#     form = HamyarForm(instance=user)
+#
+#     if request.user.is_authenticated:
+#         if request.method == 'POST':
+#             user_form = HamyarForm(request.POST, instance=request.user)
+#             member = Member.objects.get(user=request.user)
+#             if user_form.is_valid():
+#                 user_form.save()
+#                 member.user = request.user
+#                 member.phone_number = request.POST.get('phone_number')
+#                 member.save()
+#                 return HttpResponseRedirect(reverse('site:manager:account'))
+#     return render(request, 'manager/edit_profile.html', {'user': user, 'form': user_form})
