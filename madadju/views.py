@@ -50,7 +50,7 @@ def madadjuprofile(request):
     return render(request, "madadju/profile.html")
 
 
-class MadadjuMsg(request):
+class MadadjuMsg(TemplateView):
     template_name = 'madadju/sendmsg.html'
 
     def get(self, request, **kwargs):
@@ -58,8 +58,9 @@ class MadadjuMsg(request):
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
+        sender=request.user
         form = MessageForm(request.POST)
-        text = None
+        text = {'sender':sender}
         if form.is_valid():
             # post = form.save(commit=False)
             # post.user = request.user

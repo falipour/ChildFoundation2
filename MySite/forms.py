@@ -30,7 +30,7 @@ class MessageForm(forms.ModelForm):
         fields = ['receiver','text']
 
     def __init__(self, *args, **kwargs):
-        super(Message, self).__init__(*args, **kwargs)
+        super(MessageForm, self).__init__(*args, **kwargs)
         self.fields['receiver'].label = "دریافت کننده"
         self.fields['text'].label = "متن"
         self.fields['receiver'].widget.attrs[
