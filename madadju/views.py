@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from MySite.forms import ContactForm
+from MySite.forms import ContactForm,MessageForm
 
 
 def madadjuhome(request):
@@ -21,7 +21,7 @@ def madadjuchart(request):
 
 
 class MadadjuContact(TemplateView):
-    template_name = 'modir/Admin_Contact.html'
+    template_name = 'madadju/madadju-contact.html'
 
     def get(self, request, **kwargs):
         form = ContactForm()
@@ -50,8 +50,26 @@ def madadjuprofile(request):
     return render(request, "madadju/profile.html")
 
 
-def madadjumsg(request):
-    return render(request, "madadju/sendmsg.html")
+class MadadjuMsg(request):
+    template_name = 'madadju/sendmsg.html'
+
+    def get(self, request, **kwargs):
+        form = MessageForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = MessageForm(request.POST)
+        text = None
+        if form.is_valid():
+            # post = form.save(commit=False)
+            # post.user = request.user
+            # post.save()
+            form.save()
+            text = form.cleaned_data
+            form = MessageForm()
+
+        args = {'form': form, 'text': text}
+        return render(request, self.template_name, args)
 
 
 def madadjureq(request):
