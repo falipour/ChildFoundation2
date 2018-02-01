@@ -1,11 +1,12 @@
 from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth import logout as auth_logout
 from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.urls import reverse
 from django.views import View
 
-import time
 from datetime import date
 
 from MySite.forms import ContactForm
@@ -13,6 +14,9 @@ from karbar.forms import SignupForm1
 from karbar.models import MyUser
 from hamyar.models import Hamyar
 from madadkar.models import Madadkar
+from madadju.models import Madadju
+from .models import Admin
+from .forms import DeleteUserForm
 
 
 class AdminGoalsView(TemplateView):
@@ -112,7 +116,6 @@ class AdminMadadkarRegisterView(View):
         context = {'phone_number': phone_number, 'employment_date': employment_date, 'country': country, 'city': city,
                    'postal_code': postal_code, 'address': address, national_id: 'national_id'}
         if form.is_valid():
-            print('valiid')
             if len(phone_number) == 11 and phone_number[0:2] == '09':
                 form.save()
                 username = form.cleaned_data.get('username')
@@ -131,3 +134,111 @@ class AdminMadadkarRegisterView(View):
         context['form'] = form
         context['type'] = 'signup'
         return render(request, 'modir/Madadkar_Register.html', context)
+
+
+def logout(request):
+    auth_logout(request)
+    return HttpResponseRedirect(reverse('home'))
+
+
+# class UserDeleteView(TemplateView):
+#     template_name = 'modir/Admin_delete.html'
+#
+#     def get(self, request, **kwargs):
+#         form = DeleteUserForm()
+#         return render(request, self.template_name, {'form': form})
+#
+#     def post(self, request):
+#         form = DeleteUserForm(request.POST)
+#         context = {}
+#         messages = None
+#         print(form)
+#         if form.is_valid():
+#             print('hiii')
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             print(MyUser.objects.all())
+#             try:
+#                 u = MyUser.objects.get(username=username)
+#                 print(u)
+#                 try:
+#                     Admin.objects.get(user=u)
+#                     messages = 'شما نمی‌توانید مدیر را حذف کنید.'
+#                     context['messages'] = messages
+#                     context['type'] = 'red'
+#                     return HttpResponseRedirect(reverse('admin-delete'))
+#                 except Admin.DoesNotExist:
+#                     messages = "کاربر با موفقیت حذف شد."
+#                     context['messages'] = messages
+#                     context['type'] = 'green'
+#                     try:
+#                         madadkar = Madadkar.objects.get(user=u)
+#                         madadkar.delete()
+#                         return HttpResponseRedirect(reverse('admin-delete'))
+#                     except Madadkar.DoesNotExist:
+#                         try:
+#                             madadju = Madadju.objects.get(user=u)
+#                             madadju.delete()
+#                             return HttpResponseRedirect(reverse('admin-delete'))
+#                         except Madadju.DoesNotExist:
+#                             hamyar = Hamyar.objects.get(user=u)
+#                             hamyar.delete()
+#                             return HttpResponseRedirect(reverse('admin-delete'))
+#             except:
+#                 message = "چنین کاربری پیدا نشد."
+#                 context['messages'] = messages
+#                 context['type'] = 'red'
+#             context['form'] = form
+#         return render(request, 'modir/admin_delete.html', context)
+
+
+def delete_user(request):
+    context = {}
+    message = None
+    if request.method == 'POST':
+        if request.POST.get('submit') == 'حذف':
+            form = DeleteUserForm(request.POST)
+            username = request.POST['username']
+            try:
+                user = User.objects.get(username=username)
+                u = MyUser.objects.get(user=user)
+                try:
+                    Admin.objects.get(user=u)
+                    message = 'شما نمی‌توانید مدیر را حذف کنید.'
+                    context['messag'] = message
+                    type = 'red'
+                except Admin.DoesNotExist:
+                    context['message'] = message
+                    try:
+                        madadkar = Madadkar.objects.get(user=u)
+                        message = "کاربر با موفقیت حذف شد."
+                        type = 'green'
+                        madadkar.delete()
+                        u.delete()
+                        user.delete()
+                    except Madadkar.DoesNotExist:
+                        try:
+                            madadju = Madadju.objects.get(user=u)
+                            message = "کاربر با موفقیت حذف شد."
+                            type = 'green'
+                            madadju.delete()
+                            u.delete()
+                            user.delete()
+                            return HttpResponseRedirect(reverse('admin-delete'))
+                        except Madadju.DoesNotExist:
+                            print(Hamyar.objects.all())
+                            hamyar = Hamyar.objects.get(user=u)
+                            type = 'green'
+                            message = "کاربر با موفقیت حذف شد."
+                            hamyar.delete()
+                            u.delete()
+                            user.delete()
+            except:
+                message = "چنین کاربری پیدا نشد."
+                type = 'red'
+            print(message)
+            context['message'] = message
+            context['type'] = type
+            context['form'] = form
+
+    return render(request, 'modir/admin_delete.html', context)

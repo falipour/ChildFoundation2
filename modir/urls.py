@@ -10,4 +10,6 @@ urlpatterns = [
     path('contact/', AdminContactView.as_view(), name='admin-contact'),
     path('hamyar-register/', AdminHamyarRegisterView.as_view(), name='admin-hamyar-register'),
     path('madadkar-register/', AdminMadadkarRegisterView.as_view(), name='admin-madadkar-register'),
+    path('logout/', logout, name='admin-logout'),
+    path('user-delete/', delete_user, name='admin-delete'),
 ]

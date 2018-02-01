@@ -72,15 +72,14 @@
     <!--sidebar-->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav" style="font-family: 'B Mitra'; font-size: 20px; text-align: right;">
-            <li><a href="{% url 'admin-madadkar-register'%}"> &nbsp &nbsp ثبت نام مددکار &nbsp &nbsp </a></li>
+            <li><a href="{% url 'admin-madadkar-register' %}"> &nbsp &nbsp ثبت نام مددکار &nbsp &nbsp </a></li>
             <li><a href="{% url 'admin-hamyar-register' %}"> &nbsp &nbsp ثبت نام همیار &nbsp &nbsp </a></li>
             <li><a href="Admin_edit.html"> &nbsp &nbsp ویرایش اطلاعات کاربران &nbsp &nbsp </a></li>
-            <li><a href="Admin_delete.html"> &nbsp &nbsp حذف کاربر &nbsp &nbsp </a></li>
-            <li><a href="Foundation_Pardakht.html"> &nbsp &nbsp پرداخت مستقیم به مددجو &nbsp &nbsp </a></li>
-            <li><a href="Foundation_Kefalat.html"> &nbsp &nbsp تحت کفالت قرار دادن مستقیم &nbsp &nbsp </a></li>
+            <li><a href="{% url 'admin-delete' %}"> &nbsp &nbsp حذف کاربر &nbsp &nbsp </a></li>
+            <li><a href=""> &nbsp &nbsp جست و جو در بین مددجویان &nbsp &nbsp </a></li>
             <li><a href="Foundation_Report.html"> &nbsp &nbsp گزارش از پرداختی‌ها به موسسه &nbsp &nbsp </a></li>
             <li><a href="Admin_Madadju_Report.html"> &nbsp &nbsp گزارش از پرداختی‌ها به مددجو &nbsp &nbsp </a></li>
-            <li><a href="../../../MySite/templates/MySite/Home.html"> &nbsp &nbsp خروج &nbsp &nbsp </a></li>
+            <li><a href="{% url 'admin-logout' %}"> &nbsp &nbsp خروج &nbsp &nbsp </a></li>
         </ul>
     </div>
 
