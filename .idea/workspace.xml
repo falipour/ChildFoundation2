@@ -2,39 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d891f5c9-772c-4860-af75-8703e4a1616a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Chart-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Contact-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Goals-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/History-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Home-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/enseraf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/entekhab-madadjoo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/hadayaye-gheirenaghdi.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/letters.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/madadjoo-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/madadjooContact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/messageSending.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/pay.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/receipt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/vojoohepardakhti.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Viewer/Viewer_Search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju-choose.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadju-chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadju-goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadju-history.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadkarchange.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/sendmsg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/sendreq.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadjusee.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadkar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sidebar/sidebar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/cf3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/chart.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/goals.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/history.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/kid.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/kids.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo4.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo5.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/madadkar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/css/home.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/css/sidebar/sidebar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-base.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-chart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-contact.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-goals.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-history.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadkarchange.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/sendmsg.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/sendreq.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modir/models.py" afterPath="$PROJECT_DIR$/modir/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modir/views.py" afterPath="$PROJECT_DIR$/modir/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ChildFoundation2/settings.py" afterPath="$PROJECT_DIR$/ChildFoundation2/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,18 +44,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pay.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/Hamyar/pay.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -83,10 +69,18 @@
         <option value="$PROJECT_DIR$/MySite/forms.py" />
         <option value="$PROJECT_DIR$/MySite/views.py" />
         <option value="$PROJECT_DIR$/MySite/tests.py" />
-        <option value="$PROJECT_DIR$/ChildFoundation2/settings.py" />
         <option value="$PROJECT_DIR$/modir/models.py" />
         <option value="$PROJECT_DIR$/modir/views.py" />
         <option value="$PROJECT_DIR$/modir/urls.py" />
+        <option value="$PROJECT_DIR$/madadkar/forms.py" />
+        <option value="$PROJECT_DIR$/madadkar/models.py" />
+        <option value="$PROJECT_DIR$/madadkar/views.py" />
+        <option value="$PROJECT_DIR$/madadkar/urls.py" />
+        <option value="$PROJECT_DIR$/ChildFoundation2/settings.py" />
+        <option value="$PROJECT_DIR$/madadju/forms.py" />
+        <option value="$PROJECT_DIR$/madadju/models.py" />
+        <option value="$PROJECT_DIR$/madadju/urls.py" />
+        <option value="$PROJECT_DIR$/madadju/views.py" />
       </list>
     </option>
   </component>
@@ -152,6 +146,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/madadju" />
+      <recent name="$PROJECT_DIR$/madadkar" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/modir" />
       <recent name="$PROJECT_DIR$/MySite" />
@@ -359,20 +355,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChildFoundation2/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/karbar/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="28" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -392,18 +380,16 @@
         <state relative-caret-position="150">
           <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modir/models.py">
+    <entry file="file://$PROJECT_DIR$/madadkar/static/css/sidebar/sidebar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -412,6 +398,124 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadkar/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadkar/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modir/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="65" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadkar/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadkar/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadkar/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChildFoundation2/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadju/static/css/sidebar/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadju/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadju/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="32" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadkar/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="65" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadju/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadju/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
