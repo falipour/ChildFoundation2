@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'karbar',
     'MySite',
     'modir',
+    'madadkar',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
