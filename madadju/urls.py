@@ -12,5 +12,4 @@ urlpatterns = [
     path('madadkar-change/', madadju.views.madadkarchange, name='madadju-madadkar-change'),
     path('profile/', madadju.views.madadjuprofile, name='madadju-profile'),
     path('sendmsg/', MadadjuMsg.as_view(), name='madadju-msg'),
-    path('sendreq/', madadju.views.madadjureq, name='madadju-req')
 ]

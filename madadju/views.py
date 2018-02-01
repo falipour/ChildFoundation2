@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from madadju.models import Madadju
+from karbar.models import Message
+from modir.models import Admin
 
 from MySite.forms import ContactForm,MessageForm
 
@@ -43,6 +46,13 @@ class MadadjuContact(TemplateView):
 
 
 def madadkarchange(request):
+    if (request.GET.get('mybtn')):
+        user=request.user
+        admin=Admin.objects.all()
+        if(type(user)==Madadju):
+           madakar=Madadju.objects.filter(pk=user.pk).madadkar
+           text='لطفا ممدکار مرا تغییر دهید'
+        Message.objects.create(text=text, sender=user, receiver=admin)
     return render(request, "madadju/madadkarchange.html")
 
 
@@ -73,5 +83,3 @@ class MadadjuMsg(TemplateView):
         return render(request, self.template_name, args)
 
 
-def madadjureq(request):
-    return render(request, "madadju/sendreq.html")

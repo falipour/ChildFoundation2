@@ -2,6 +2,12 @@ from django.contrib.auth import logout as auth_logout
 from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from .models import Hamyar
+# from .forms import HamyarForm
+from karbar.models import MyUser
+from django.shortcuts import render, redirect
+from MySite.forms import ContactForm
 
 
 class HamyarHomeView(TemplateView):
@@ -47,6 +53,24 @@ class LettersBoxView(TemplateView):
 class MadadjooContactView(TemplateView):
     template_name = 'hamyar/Madadjoo_Contact.html'
 
+    def get(self, request, **kwargs):
+        form = ContactForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = ContactForm(request.POST)
+        text = None
+        if form.is_valid():
+            # post = form.save(commit=False)
+            # post.user = request.user
+            # post.save()
+            form.save()
+            text = form.cleaned_data
+            form = ContactForm()
+
+        args = {'form': form, 'text': text}
+        return render(request, self.template_name, args)
+
 
 class MadadjooListView(TemplateView):
     template_name = 'hamyar/Madadjoo_List.html'
@@ -71,3 +95,19 @@ class SendMessageView(TemplateView):
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('home'))
+
+# @login_required
+# def edit_profile(request):
+#     user = request.user
+#     user_form = HamyarForm(instance=user)
+#     if request.user.is_authenticated:
+#         if request.method == 'POST':
+#             user_form = HamyarForm(request.POST, instance=request.user)
+#             hamyar = Hamyar.objects.get(user=request.user)
+#             if user_form.is_valid():
+#                 user_form.save()
+#                 hamyar.user = user
+#                 hamyar.report_method = request.POST.get('report-method')
+#                 hamyar.save()
+#                 return HttpResponseRedirect(reverse('site:manager:account'))
+#         return render(request, 'hamyar/Edit_Profile.html', {'user': user, 'form': user_form})
