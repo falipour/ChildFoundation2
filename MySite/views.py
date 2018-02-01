@@ -1,10 +1,12 @@
 from django.views.generic import TemplateView
-from django.shortcuts import render
 from .forms import ContactForm
 from karbar.models import MyUser
 from hamyar.models import Hamyar
 from karbar.forms import SignupForm1
 from django.contrib.auth import authenticate, login as auth_login
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.urls import reverse
 
 
 def home(request):
@@ -80,7 +82,7 @@ class RegisterView(TemplateView):
                 member.save()
                 hamyar = Hamyar.objects.create(user=member, report_method=report_method)
                 hamyar.save()
-                return render(request, 'Hamyar/Home-Hamyar.html')
+                return HttpResponseRedirect(reverse('hamyar-home'))
             else:
                 phone_number_error = "شماره تلفن باید 11 رقمی باشد و با 09 آغاز شود."
                 context['phone_number_error'] = phone_number_error
