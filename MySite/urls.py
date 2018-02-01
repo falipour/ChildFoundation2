@@ -14,5 +14,5 @@ urlpatterns = [
     path('history/', history, name='history'),
     path('contact/', ContactView.as_view(), name='contact'),
     path('login/', login, name='login'),
-    path('register/', signup, name='hamyar-register'),
+    path('register/', RegisterView.as_view(), name='hamyar-register'),
 ]
