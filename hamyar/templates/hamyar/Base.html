@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %}همیار{% endblock %}{</title>
+    <title>{% block title %}بنیاد کودک{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../sidebar/sidebar.css">
-    <link rel="stylesheet" href="../../modir/static/modir/css/home.css">
+    <link rel="stylesheet" href="../../static/hamyar/css/home.css">
+    <link rel="stylesheet" href="../../static/hamyar/css/sidebar/sidebar.css">
 </head>
 <body style="background-color: #3f001f;">
-
-
 <div id="wrapper">
 
     <nav class="navbar" style="border: black solid 2px; padding: 0px; margin: 0px">
@@ -38,7 +36,8 @@
                 </ul>
                 <span class="pull-right">
             <ul class="nav navbar-nav">
-                <li><a href="#" style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                <li><a href="{% url 'hamyar-contact' %}"
+                       style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
                        onMouseOver="this.style.color='#230007';"
                        onMouseOut="this.style.color='#7a0134'; ">ارتباط با ما</a></li>
                 <li class="dropdown">
@@ -50,16 +49,16 @@
                 style="text-align: right; color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
                 onMouseOver="this.style.color='#230007'; this.style.fontWeight='bold';"
                 onMouseOut="this.style.color='#7a0134'; this.style.fontWeight='normal'">
-              <li><a href="../Viewer/History.html">تاریخچه</a></li>
-              <li><a href="../Viewer/Chart.html">چارت سازمانی</a></li>
-              <li><a href="../Viewer/Goals.html">اهداف و دیدگاه ها</a></li>
+              <li><a href="{% url 'hamyar-history' %}">تاریخچه</a></li>
+              <li><a href="{% url 'hamyar-chart' %}">چارت سازمانی</a></li>
+              <li><a href="{% url 'hamyar-goals' %}">اهداف و دیدگاه ها</a></li>
             </ul>
             </li>
-                <li class="active"><a href="../Viewer/Home.html"
+                <li class="active"><a href="{% url 'hamyar-home' %}"
                                       style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
                                       onMouseOver="this.style.color='#230007';"
                                       onMouseOut="this.style.color='#7a0134';">بنیاد کودک</a></li>
-                 <li><img src="../../modir/static/modir/images/cf3.png"
+                 <li><img src="../../static/images/cf3.png"
                           style="width: 50px; height: 50px; opacity: 0.8; padding: 5px; alignment: right;"></li>
 
                 <!--drop down menu-->
@@ -74,22 +73,24 @@
     <!--sidebar-->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav" style="font-family: 'B Mitra'; font-size: 20px; text-align: right;">
-            <li><a href="pay.html"> &nbsp &nbsp پرداخت &nbsp &nbsp </a></li>
-            <li><a href="hadayaye-gheirenaghdi.html"> &nbsp &nbsp هدایای غیرنقدی &nbsp &nbsp </a></li>
-            <li><a href="messageSending.html"> &nbsp &nbsp ارسال پیام &nbsp &nbsp </a></li>
-            <li><a href="madadjooContact.html"> &nbsp &nbsp درخواست ارتباط با مددجو &nbsp &nbsp </a></li>
-            <li><a href="madadjoo-list.html"> &nbsp &nbsp کودکان تحت حمایت &nbsp &nbsp </a></li>
-            <li><a href="entekhab-madadjoo.html"> &nbsp &nbsp انتخاب مددجو &nbsp &nbsp </a></li>
-            <li><a href="enseraf.html"> &nbsp &nbsp انصراف &nbsp &nbsp </a></li>
-            <li><a href="letters.html"> &nbsp &nbsp نامه ها &nbsp &nbsp </a></li>
-            <li><a href="vojoohepardakhti.html"> &nbsp &nbsp گزارش وجوه پرداختی &nbsp &nbsp </a></li>
-            <li><a href="receipt.html"> &nbsp &nbsp لیست رسیدها &nbsp &nbsp </a></li>
-            <li><a href="search.html"> &nbsp &nbsp جست و جو &nbsp &nbsp </a></li>
-            <li><a href="../Viewer/Chart.html"> &nbsp &nbsp خروج &nbsp &nbsp </a></li>
+            <li><a href="Pay.html"> &nbsp &nbsp پرداخت &nbsp &nbsp </a></li>
+            <li><a href="Ehda.html"> &nbsp &nbsp هدایای غیرنقدی &nbsp &nbsp </a></li>
+            <li><a href="Send_Message.html"> &nbsp &nbsp ارسال پیام &nbsp &nbsp </a></li>
+            <li><a href="Madadjoo_Contact.html"> &nbsp &nbsp درخواست ارتباط با مددجو &nbsp &nbsp </a></li>
+            <li><a href="Madadjoo_List.html"> &nbsp &nbsp کودکان تحت حمایت &nbsp &nbsp </a></li>
+            <li><a href="Entekhab.html"> &nbsp &nbsp انتخاب مددجو &nbsp &nbsp </a></li>
+            <li><a href="Enseraf.html"> &nbsp &nbsp انصراف &nbsp &nbsp </a></li>
+            <li><a href="Letters_Box.html"> &nbsp &nbsp نامه ها &nbsp &nbsp </a></li>
+            <li><a href="Pay_Receipt.html"> &nbsp &nbsp گزارش وجوه پرداختی &nbsp &nbsp </a></li>
+            <li><a href="Ehda_Receipt.html"> &nbsp &nbsp لیست رسیدها &nbsp &nbsp </a></li>
+            <li><a href="Search.html"> &nbsp &nbsp جست و جو &nbsp &nbsp </a></li>
+            <li><a href="../../../MySite/templates/MySite/Home.html"> &nbsp &nbsp خروج &nbsp &nbsp </></li>
         </ul>
     </div>
 
 
+    {% block content %}
+    {% endblock %}
 
     <!--menue toggle script-->
     <script>
