@@ -49,33 +49,41 @@ class ContactView(TemplateView):
         return render(request, self.template_name, args)
 
 
-def signup(request):
-    form = SignupForm1(request.POST)
-    phone_number = request.POST.get('phone_number')
-    country = request.POST.get('report_method')
-    city = request.POST.get('city')
-    address = request.POST.get('address')
-    postal_code = request.POST.get('postal_code')
-    report_method = request.POST.get('report_method')
-    context = {'phone_number': phone_number, 'report_method': report_method, 'country': country, 'city': city,
-               'postal_code': postal_code, 'address': address}
-    if form.is_valid():
-        if len(phone_number) == 11 and phone_number[0:2] == '09':
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            auth_login(request, user)
-            member = MyUser.objects.create(user=user, phone_number=phone_number, country=country, city=city,
-                                           postal_code=postal_code, address=address)
-            member.save()
-            manager = Hamyar.objects.create(member=member, report_method=report_method)
-            manager.save()
-            return render(request, 'Hamyar/Home-Hamyar.html', {'type': 'complexRegister'})
-        else:
-            phone_number_error = "شماره تلفن باید 11 رقمی باشد و با 09 آغاز شود."
-            context['phoneNumberError'] = phone_number_error
+class RegisterView(TemplateView):
+    template_name = 'MySite/Hamyar_Register.html'
 
-    context['form'] = form
-    context['type'] = "signup"
-    return render(request, 'MySite/Hamyar_Register.html', context)
+    def get(self, request, **kwargs):
+        form = SignupForm1()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = SignupForm1(request.POST)
+        phone_number = request.POST.get('phone_number')
+        national_id = request.POST.get('national_id')
+        country = request.POST.get('report_method')
+        city = request.POST.get('city')
+        address = request.POST.get('address')
+        postal_code = request.POST.get('postal_code')
+        report_method = request.POST.get('report_method')
+        context = {'phone_number': phone_number, 'report_method': report_method, 'country': country, 'city': city,
+                   'postal_code': postal_code, 'address': address, national_id: 'national_id'}
+        if form.is_valid():
+            print('valiid')
+            if len(phone_number) == 11 and phone_number[0:2] == '09':
+                form.save()
+                username = form.cleaned_data.get('username')
+                raw_password = form.cleaned_data.get('password1')
+                user = authenticate(username=username, password=raw_password)
+                auth_login(request, user)
+                member = MyUser.objects.create(user=user, phone_number=phone_number, country=country, city=city,
+                                               postal_code=postal_code, address=address, national_id=national_id)
+                member.save()
+                hamyar = Hamyar.objects.create(user=member, report_method=report_method)
+                hamyar.save()
+                return render(request, 'Hamyar/Home-Hamyar.html')
+            else:
+                phone_number_error = "شماره تلفن باید 11 رقمی باشد و با 09 آغاز شود."
+                context['phone_number_error'] = phone_number_error
+        context['form'] = form
+        context['type'] = 'signup'
+        return render(request, 'MySite/Hamyar_Register.html', context)
