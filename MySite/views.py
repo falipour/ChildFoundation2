@@ -62,7 +62,7 @@ class RegisterView(TemplateView):
         form = SignupForm1(request.POST)
         phone_number = request.POST.get('phone_number')
         national_id = request.POST.get('national_id')
-        country = request.POST.get('report_method')
+        country = request.POST.get('country')
         city = request.POST.get('city')
         address = request.POST.get('address')
         postal_code = request.POST.get('postal_code')

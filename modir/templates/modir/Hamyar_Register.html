@@ -1,203 +1,260 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>ثبت نام همیار</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../../static/modir/css/sidebar/sidebar.css">
-    <link rel="stylesheet" href="../../static/modir/css/home.css">
-</head>
-<body style="background-color: #3f001f;">
+{% extends 'modir/base.html' %}
+
+{% block title %}
+ثبت‌ نام همیار
+{% endblock %}
 
 
-<div id="wrapper">
 
-    <nav class="navbar" style="border: black solid 2px; padding: 0px; margin: 0px">
-        <div class="container-fluid" style="background: white; padding: 0px; margin: 0px">
-
-            <!-- Logo -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-                    <span class="icon-bar" style="background-color: #7a0134;"></span>
-                    <span class="icon-bar" style="background-color: #7a0134;"></span>
-                    <span class="icon-bar" style="background-color: #7a0134;"></span>
-                </button>
-            </div>
-
-            <!--Menu Items-->
-            <div class="collapse navbar-collapse" id="mainNavBar">
-                <ul class="nav navbar-nav navbar-left">
-                    <li>
-                        <a href="#" class="btn btn-success" id="menu-toggle"
-                           style=" background-color:#630d31; border-color:#4d0926; font-family: 'B Mitra'; font-weight:bold; font-size: 18px; padding: 8px; margin: 8px;">منوی
-                            کاربری</a>
-                    </li>
-                </ul>
-                <span class="pull-right">
-            <ul class="nav navbar-nav">
-                <li><a href="{% url 'admin-contact' %}" style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
-                       onMouseOver="this.style.color='#230007';"
-                       onMouseOut="this.style.color='#7a0134'; ">ارتباط با ما</a></li>
-                <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-               style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
-               onMouseOver="this.style.color='#230007';"
-               onMouseOut="this.style.color='#7a0134';">آشنایی با بنیاد کودک <span class="caret"></span></a>
-            <ul class="dropdown-menu"
-                style="text-align: right; color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
-                onMouseOver="this.style.color='#230007'; this.style.fontWeight='bold';"
-                onMouseOut="this.style.color='#7a0134'; this.style.fontWeight='normal'">
-              <li><a href="{% url 'admin-history' %}">تاریخچه</a></li>
-              <li><a href="{% url 'admin-chart' %}">چارت سازمانی</a></li>
-              <li><a href="{% url 'admin-goals' %}">اهداف و دیدگاه ها</a></li>
-            </ul>
-            </li>
-                <li class="active"><a href="#"
-                                      style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
-                                      onMouseOver="this.style.color='#230007';"
-                                      onMouseOut="this.style.color='#7a0134';">بنیاد کودک</a></li>
-                 <li><img src="../../static/modir/images/cf3.png"
-                          style="width: 50px; height: 50px; opacity: 0.8; padding: 5px; alignment: right;"></li>
-
-                <!--drop down menu-->
-            </ul>
-                    <!--right alight-->
-            </span>
-            </div>
-
-        </div>
-    </nav>
-
-    <!--sidebar-->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav" style="font-family: 'B Mitra'; font-size: 20px; text-align: right;">
-            <li><a href="Madadkar_Register.html"> &nbsp &nbsp ثبت نام مددکار &nbsp &nbsp </a></li>
-            <li><a href="Hamyar_Register.html"> &nbsp &nbsp ثبت نام همیار &nbsp &nbsp </a></li>
-            <li><a href="Admin_edit.html"> &nbsp &nbsp ویرایش اطلاعات کاربران &nbsp &nbsp </a></li>
-            <li><a href="Admin_delete.html"> &nbsp &nbsp حذف کاربر &nbsp &nbsp </a></li>
-            <li><a href="Foundation_Pardakht.html"> &nbsp &nbsp پرداخت مستقیم به مددجو &nbsp &nbsp </a></li>
-            <li><a href="Foundation_Kefalat.html"> &nbsp &nbsp تحت کفالت قرار دادن مستقیم &nbsp &nbsp </a></li>
-            <li><a href="Foundation_Report.html"> &nbsp &nbsp گزارش از پرداختی‌ها به موسسه &nbsp &nbsp </a></li>
-            <li><a href="Admin_Madadju_Report.html"> &nbsp &nbsp گزارش از پرداختی‌ها به مددجو &nbsp &nbsp </a></li>
-            <li><a href="../../../MySite/templates/MySite/Home.html"> &nbsp &nbsp خروج &nbsp &nbsp </a></li>
-        </ul>
-    </div>
-    <div class="modal fade" id="Register">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- header -->
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title text-right">ثبت نام همیار</h3>
-                </div>
-
-                <!-- body (form) -->
-                <div class="modal-body">
-                    <form role="form">
-                        <div class="form-group">
-                            <input type="text" class="form-control text-right"
-                                   placeholder="نام و نام‌خانوادگی">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control text-right"
-                                   placeholder="آدرس پست الکترونیکی">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control text-right"
-                                   placeholder="شماره تماس">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control text-right"
-                                   placeholder="نام کاربری">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control text-right"
-                                   placeholder="کلمه عبور">
-                        </div>
-                    </form>
-                </div>
-
-                <!-- button -->
-                <div class="modal-footer">
-                    <button class="btn btn-primary btn-block" style="background: #850032">ثبت نام</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+{% block content %}
+    <!--page content-->
     <div id="page-content-wrapper" class="offset8">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <section id="signup">
+                            <form class="well form-horizontal" style="direction: rtl" action="" method="post"
+                                  id="signup_form">{% csrf_token %}
+                                <fieldset>
+                                    <legend>
+                                        <center><h2><b>ثبت نام همیار</b></h2></center>
+                                    </legend>
+                                    <br>
 
-                        <h3 style="font-family: 'B Nazanin';">ثبت نام همیار</h3>
-                        <br>
-                        <form style="font-family: 'B Nazanin'; font-size: 20px;">
-                            <div class="form-group">
-                                <input type="text" class="form-control text-right"
-                                       placeholder="نام و نام‌خانوادگی">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control text-right"
-                                       placeholder="آدرس پست الکترونیکی">
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" class="form-control text-right"
-                                       placeholder="شماره تماس">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control text-right"
-                                       placeholder="نام کاربری">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control text-right"
-                                       placeholder="کلمه عبور">
-                            </div>
-                        </form>
-                        <div class="modal-footer">
-                            <button class="btn btn-primary btn-block" data-toggle="modal"
-                                    data-target="#Madadkar_Register" style="background: #850032; width: 100px">ثبت نام
-                            </button>
-                        </div>
-                        <div class="modal fade" id="Madadkar_Register">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
+                                    <div class="form-group  {% if form.first_name.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="first_name" placeholder="نام" class="form-control"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.first_name.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.first_name.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
 
+                                    <div class="form-group  {% if form.last_name.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="last_name" placeholder="نام خانوادگی"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.last_name.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.last_name.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
 
-                                    <!-- body (form) -->
-                                    <div class="modal-body">
-                                        <p class="text-right">
-                                            همیار جدید به لیست همیاران اضافه شد
-                                        </p>
+                                    <div class="form-group  {% if form.username.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="username" placeholder="نام کاربری" class="form-control"
+                                                       type="text">
+                                            </div>
+                                        </div>
                                     </div>
 
+                                    {% if form.username.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.username.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
 
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="form-group {% if form.email.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-envelope"></i></span>
+                                                <input name="email" placeholder="آدرس ایمیل" class="form-control"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.email.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.email.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if phone_number_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-phone"></i></span>
+                                                <input name="phone_number" placeholder="شماره تلفن"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if phone_number_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ phone_number_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if national_id_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-search"></i></span>
+                                                <input name="national_id" placeholder="کد ملی"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if national_id_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ national_id_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if country_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-road"></i></span>
+                                                <input name="country" placeholder="کشور"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if country_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ country_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if city_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-road"></i></span>
+                                                <input name="city" placeholder="شهر"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if city_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ city_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if address_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-road"></i></span>
+                                                <input name="address" placeholder="آدرس"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if address_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ address_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if postal_code_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-road"></i></span>
+                                                <input name="postal_code" placeholder="کدپستی"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if postal_code_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ postal_code_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if report_method_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-cloud"></i></span>
+                                                <input name="report_method" placeholder='روش ارتباطی'
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if report_method_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ postal_code_error }}
+                                        </span>
+                                    {% endif %}
+
+
+
+
+
+
+
+                                    <div class="form-group  {% if form.password1.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="password1" placeholder="رمز" class="form-control"
+                                                       type="password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.password1.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.password1.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+                                    <div class="form-group {% if form.password2.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="password2" placeholder="رمز را دوباره وارد کنید."
+                                                       class="form-control"
+                                                       type="password">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% if form.password2.errors and type == 'signup' %}
+                                        <span class="text-danger">
+                                            <p>{% for error in form.password2.errors %}{{ error }}{% endfor %}</p>
+                                        </span>
+                                    {% endif %}
+
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                <input type="submit" name="submit" id="register-submit"
+                                                       tabindex="4" class="form-control btn btn-register"
+                                                       value="ثبت نام"
+                                                       placeholder="ثبت نام">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!--menue toggle script-->
-    <script>
-        $("#menu-toggle").click(function (e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("menuDisplayed")
-        });
-    </script>
-
-</div>
-
-
-</body>
-</html>
+{% endblock %}
