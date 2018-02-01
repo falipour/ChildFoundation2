@@ -20,7 +20,7 @@ def madadkarchart(request):
 
 
 class MadadkarContact(TemplateView):
-    template_name = 'modir/Admin_Contact.html'
+    template_name = 'madadkar/Contact.html'
 
     def get(self, request, **kwargs):
         form = ContactForm()
