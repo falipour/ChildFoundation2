@@ -12,37 +12,32 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
-                       <h1 style="font-family: 'B Nazanin';">ارسال پیام</h1>
-                        <br>
-                        <form>
-                            <p style="font-size: 24px; font-family: 'B Nazanin'; color: #4d0926; ">
-                                عنوان پیام
-                                <br>
-                                <input type="text" align="right" style="border-radius: 8px; border-style: ridge;">
-                                <br>
-                                <br>
-                                گیرنده
-                                <br>
-                                <select style="border-radius: 8px; border-style: ridge;">
-                                    <option>
-                                        مددکار
-                                    </option>
-                                    <option>
-                                        مدیر
-                                    </option>
-                                </select>
-                                <br><br>
-                                متن پیام
-                                <br>
-                                <textarea style="text-align: right; border-radius: 8px; border-style: ridge;" rows="10" cols="30"></textarea>
-                                <br>
-                                <button type="submit" name="submit" style="color: white; background-color: rgba(121,7,75,0.8); border-radius: 10px; font-size: 28px;">ثبت</button>
-                            </p>
-                        </form>
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; direction: rtl;">
+                        <h1 class="text-right" id="bonyad">ارسال پیام</h1>
+                        <form role="form" method="post" style="direction: rtl;">
+                                            {% csrf_token %}
+                                            {% for field in form %}
+                                                <label class="label label-default rtl"
+                                                       style="font-family: 'B Mitra'; font-weight:bold; font-size: 13px; padding: 5px;">{{ field.label_tag }}</label>
+                                                <br>
+                                                <br>
+                                                <span class="pull-right"> {{ field }} </span>
+
+                                                <br>
+                                                <br>
+                                            {% endfor %}
+                                            <br>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary btn-block"
+                                                        style="background: #850032">ارسال
+                                                </button>
+                                            </div>
+                                        </form>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 {% endblock %}
