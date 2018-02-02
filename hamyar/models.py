@@ -16,6 +16,8 @@ class Payment(models.Model):
     date = models.DateField()
     value = models.IntegerField()
     madadju = models.ForeignKey(Madadju, on_delete=models.CASCADE)
+    hamyar = models.ForeignKey(Hamyar, on_delete=models.DO_NOTHING)
+
 
 
 class Adapt(models.Model):
@@ -26,5 +28,6 @@ class Adapt(models.Model):
 class PaymentFoundation(models.Model):
     date = models.DateField()
     value = models.IntegerField()
+    hamyar = models.ForeignKey(Hamyar, on_delete=models.DO_NOTHING)
 
 
