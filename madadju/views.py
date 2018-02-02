@@ -48,10 +48,10 @@ class MadadjuContact(TemplateView):
 def madadkarchange(request):
     if (request.GET.get('mybtn')):
         user=request.user
+        user=MyUser.objects.get(user=user)
+        user=Madadju.objects.get(user=user)
         admin=Admin.objects.all()
-        if(type(user)==Madadju):
-           madakar=Madadju.objects.filter(pk=user.pk).madadkar
-           text='لطفا ممدکار مرا تغییر دهید'
+        text='لطفا مددکار مرا تغییر دهید'
         Message.objects.create(text=text, sender=user, receiver=admin)
     return render(request, "madadju/madadkarchange.html")
 
