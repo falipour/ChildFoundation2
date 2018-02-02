@@ -128,6 +128,6 @@ def edit_profile(request):
                 hamyar.report_method = request.POST.get('report_method')
                 myUser.save()
                 hamyar.save()
-                return render(request, 'hamyar/Hamyar_Home.html', {'user': user}) #TODO zeinab
-                # return HttpResponseRedirect(reverse('hamyar-home'), {'user': user})
+                # return render(request, 'hamyar/Hamyar_Home.html', {'user': user}) #TODO zeinab
+                return HttpResponseRedirect(reverse('hamyar-home'))
     return render(request, 'hamyar/Edit_Profile.html', {'user': user, 'myUser': myUser, 'hamyar':hamyar})
