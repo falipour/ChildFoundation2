@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from madadju.models import Madadju
-from karbar.models import Message
+from karbar.models import Message,MyUser
 from modir.models import Admin
 
 from MySite.forms import ContactForm,MessageForm
@@ -68,7 +68,8 @@ class MadadjuMsg(TemplateView):
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        sender=request.user
+        sender=MyUser.objects.get(user=request.user)
+        sender=Madadju.object.get(user=sender)
         form = MessageForm(request.POST)
         text = {'sender':sender}
         if form.is_valid():
