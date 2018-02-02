@@ -6,3 +6,4 @@ from .models import *
 admin.site.register(Hamyar)
 admin.site.register(Payment)
 admin.site.register(PaymentFoundation)
+admin.site.register(Adapt)
