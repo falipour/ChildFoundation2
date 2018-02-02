@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.http import HttpResponseRedirect
 from madadju.models import Madadju
-from karbar.models import Message,MyUser
+from karbar.models import Message, MyUser
 from modir.models import Admin
+from django.urls import reverse
 
-from MySite.forms import ContactForm,MessageForm
+from MySite.forms import ContactForm, MessageForm
 
 
 def madadjuhome(request):
@@ -47,11 +49,11 @@ class MadadjuContact(TemplateView):
 
 def madadkarchange(request):
     if (request.GET.get('mybtn')):
-        user=request.user
-        user=MyUser.objects.get(user=user)
-        user=Madadju.objects.get(user=user)
-        admin=Admin.objects.all()
-        text='لطفا مددکار مرا تغییر دهید'
+        user = request.user
+        user = MyUser.objects.get(user=user)
+        user = Madadju.objects.get(user=user)
+        admin = Admin.objects.all()
+        text = 'لطفا مددکار مرا تغییر دهید'
         Message.objects.create(text=text, sender=user, receiver=admin)
     return render(request, "madadju/madadkarchange.html")
 
@@ -68,19 +70,19 @@ class MadadjuMsg(TemplateView):
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        sender=MyUser.objects.get(user=request.user)
-        sender=Madadju.object.get(user=sender)
         form = MessageForm(request.POST)
-        text = {'sender':sender}
+        sender = request.user
+        text = request.POST.get('text')
+        user = request.user
+        u = MyUser.objects.get(user=user)
+        madadju = Madadju.objects.get(user=u)
+        receiver = madadju.current_madadkar
+        receiver = receiver.user
+        context = {'sender': u, 'text': text, 'receiver': receiver}
         if form.is_valid():
-            # post = form.save(commit=False)
-            # post.user = request.user
-            # post.save()
-            form.save()
-            text = form.cleaned_data
-            form = MessageForm()
+            message = Message.objects.create(sender=u, receiver=receiver, text=text)
+            message.save()
+            return HttpResponseRedirect(reverse('hamyar-home'))
 
-        args = {'form': form, 'text': text}
-        return render(request, self.template_name, args)
-
-
+        context['form'] = form
+        return render(request, self.template_name, context)

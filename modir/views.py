@@ -78,7 +78,6 @@ class AdminHamyarRegisterView(View):
         context = {'phone_number': phone_number, 'report_method': report_method, 'country': country, 'city': city,
                    'postal_code': postal_code, 'address': address, national_id: 'national_id'}
         if form.is_valid():
-            print('valiid')
             if len(phone_number) == 11 and phone_number[0:2] == '09':
                 form.save()
                 username = form.cleaned_data.get('username')
