@@ -1,7 +1,6 @@
 {% extends 'modir/base.html' %}
 
-{% block title %}
-    ثبت نام مددکار
+{% block title %}همیار
 {% endblock %}
 
 
@@ -18,7 +17,7 @@
                                   id="signup_form">{% csrf_token %}
                                 <fieldset>
                                     <legend>
-                                        <center><h2><b>ثبت نام مددکار</b></h2></center>
+                                        <center><h2><b>ثبت نام همیار</b></h2></center>
                                     </legend>
                                     <br>
 
@@ -183,6 +182,16 @@
                                         </span>
                                     {% endif %}
 
+                                    <div class="form-group {% if report_method_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-cloud"></i></span>
+                                                <input name="report_method" placeholder='روش ارتباطی'
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
                                     {% if report_method_error and type == 'signup' %}
                                         <span class="text-danger" style="text-align:center;">
                                             {{ postal_code_error }}

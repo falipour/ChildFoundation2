@@ -23,17 +23,8 @@ class ContactForm(forms.ModelForm):
             'style'] = 'width:400px; height20px; border-radius=5px; direction:rtl; float:left;'
 
 
-
 class MessageForm(forms.ModelForm):
     class Meta:
         model = Message
-        fields = ['receiver','text']
+        fields = ['text',]
 
-    def __init__(self, *args, **kwargs):
-        super(MessageForm, self).__init__(*args, **kwargs)
-        self.fields['receiver'].label = "دریافت کننده"
-        self.fields['text'].label = "متن"
-        self.fields['receiver'].widget.attrs[
-            'style'] = 'width:400px; height:20px; border-radius=5px; direction:rtl; float:left;'
-        self.fields['text'].widget.attrs[
-            'style'] = 'width:400px; height20px; border-radius=5px; direction:rtl; float:left;'

@@ -21,3 +21,12 @@ db.sqlite3
 db.sqlite3
 modir/__pycache__/urls.cpython-36.pyc
 modir/__pycache__/views.cpython-36.pyc
+.idea/ChildFoundation2.iml
+db.sqlite3
+madadju/__pycache__/views.cpython-36.pyc
+db.sqlite3
+karbar/__pycache__/views.cpython-36.pyc
+madadju/__pycache__/views.cpython-36.pyc
+madadju/views.py
+modir/__pycache__/views.cpython-36.pyc
+MySite/__pycache__/forms.cpython-36.pyc
