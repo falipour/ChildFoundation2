@@ -73,18 +73,19 @@
     <!--sidebar-->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav" style="font-family: 'B Mitra'; font-size: 20px; text-align: right;">
-            <li><a href="Pay.html"> &nbsp &nbsp پرداخت &nbsp &nbsp </a></li>
-            <li><a href="Ehda.html"> &nbsp &nbsp هدایای غیرنقدی &nbsp &nbsp </a></li>
-            <li><a href="Send_Message.html"> &nbsp &nbsp ارسال پیام &nbsp &nbsp </a></li>
-            <li><a href="Madadjoo_Contact.html"> &nbsp &nbsp درخواست ارتباط با مددجو &nbsp &nbsp </a></li>
-            <li><a href="Madadjoo_List.html"> &nbsp &nbsp کودکان تحت حمایت &nbsp &nbsp </a></li>
-            <li><a href="Entekhab.html"> &nbsp &nbsp انتخاب مددجو &nbsp &nbsp </a></li>
-            <li><a href="Enseraf.html"> &nbsp &nbsp انصراف &nbsp &nbsp </a></li>
-            <li><a href="Letters_Box.html"> &nbsp &nbsp نامه ها &nbsp &nbsp </a></li>
-            <li><a href="Pay_Receipt.html"> &nbsp &nbsp گزارش وجوه پرداختی &nbsp &nbsp </a></li>
-            <li><a href="Ehda_Receipt.html"> &nbsp &nbsp لیست رسیدها &nbsp &nbsp </a></li>
-            <li><a href="Search.html"> &nbsp &nbsp جست و جو &nbsp &nbsp </a></li>
-            <li><a href="{% url 'hamyar-logout' %}"> &nbsp &nbsp خروج &nbsp &nbsp </></li>
+            <li><a href="{% url 'pay' %}"> &nbsp &nbsp پرداخت &nbsp &nbsp </a></li>
+            <li><a href="{% url 'ehda' %}"> &nbsp &nbsp هدایای غیرنقدی &nbsp &nbsp </a></li>
+            <li><a href="{% url 'send-message' %}"> &nbsp &nbsp ارسال پیام &nbsp &nbsp </a></li>
+            <li><a href="{% url 'madadjoo-contact' %}"> &nbsp &nbsp درخواست ارتباط با مددجو &nbsp &nbsp </a></li>
+            <li><a href="{% url 'madadjoo-list' %}"> &nbsp &nbsp کودکان تحت حمایت &nbsp &nbsp </a></li>
+            <li><a href="{% url 'entekhab' %}"> &nbsp &nbsp انتخاب مددجو &nbsp &nbsp </a></li>
+            <li><a href="{% url 'enseraf' %}"> &nbsp &nbsp انصراف &nbsp &nbsp </a></li>
+            <li><a href="{% url 'letters-box' %}"> &nbsp &nbsp نامه ها &nbsp &nbsp </a></li>
+            <li><a href="{% url 'pay-receipt' %}"> &nbsp &nbsp گزارش وجوه پرداختی &nbsp &nbsp </a></li>
+            <li><a href="{% url 'ehda-receipt' %}"> &nbsp &nbsp لیست رسیدها &nbsp &nbsp </a></li>
+            <li><a href="{% url 'seach' %}"> &nbsp &nbsp جست و جو &nbsp &nbsp </a></li>
+            <li><a href="{% url 'edit_profile' %}">&nbsp &nbsp ویرایش اطلاعات &nbsp &nbsp</a> </li>
+            <li><a href="{% url 'hamyar-logout' %}"> &nbsp &nbsp خروج &nbsp &nbsp </a></li>
         </ul>
     </div>
 
