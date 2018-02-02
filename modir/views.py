@@ -253,3 +253,12 @@ class PaymentView(generic.ListView):
 
     def get_queryset(self):
         return PaymentFoundation.objects.all()
+
+
+class PaymentMadadjuView(generic.ListView):
+    template_name = 'modir/PaymentsMadadjuReports.html'
+
+    context_object_name = 'all_payments'
+
+    def get_queryset(self):
+        return Payment.objects.all()
