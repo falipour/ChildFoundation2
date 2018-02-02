@@ -47,6 +47,7 @@ class MadadjuContact(TemplateView):
 
 def madadkarchange(request):
     if (request.GET.get('mybtn')):
+        print("hi")
         user=request.user
         user=MyUser.objects.get(user=user)
         user=Madadju.objects.get(user=user)
