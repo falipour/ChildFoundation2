@@ -12,4 +12,5 @@ urlpatterns = [
     path('madadkar-register/', AdminMadadkarRegisterView.as_view(), name='admin-madadkar-register'),
     path('logout/', logout, name='admin-logout'),
     path('user-delete/', delete_user, name='admin-delete'),
+    path('payments/', PaymentView.as_view(), name='admin-payment')
 ]

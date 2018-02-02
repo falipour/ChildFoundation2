@@ -3,16 +3,18 @@ from django.contrib.auth import logout as auth_logout
 from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
+from django.views.generic import View
 from django.shortcuts import render
 from django.urls import reverse
 from django.views import View
+from django.views import generic
 
 from datetime import date
 
 from MySite.forms import ContactForm
 from karbar.forms import SignupForm1
 from karbar.models import MyUser
-from hamyar.models import Hamyar
+from hamyar.models import Hamyar, PaymentFoundation, Payment
 from madadkar.models import Madadkar
 from madadju.models import Madadju
 from .models import Admin
@@ -242,3 +244,12 @@ def delete_user(request):
             context['form'] = form
 
     return render(request, 'modir/admin_delete.html', context)
+
+
+class IndexView(generic.ListView):
+    template_name = 'modir/PaymentsReport.html'
+
+    context_object_name = 'all_payments'
+
+    def get_queryset(self):
+        return PaymentFoundation.objects.all()
