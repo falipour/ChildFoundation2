@@ -246,7 +246,7 @@ def delete_user(request):
     return render(request, 'modir/admin_delete.html', context)
 
 
-class IndexView(generic.ListView):
+class PaymentView(generic.ListView):
     template_name = 'modir/PaymentsReport.html'
 
     context_object_name = 'all_payments'

@@ -7,3 +7,6 @@ madadju/__pycache__/views.cpython-36.pyc
 modir/__pycache__/urls.cpython-36.pyc
 modir/__pycache__/views.cpython-36.pyc
 MySite/__pycache__/forms.cpython-36.pyc
+*.pyc
+modir/__pycache__/views.cpython-36.pyc
+db.sqlite3
