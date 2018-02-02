@@ -15,7 +15,7 @@ class MyUser(models.Model):
     phone_number = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.user.first_name + " " + self.user.last_name
+        return self.user.username
 
 
 class Message(models.Model):
