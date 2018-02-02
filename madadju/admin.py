@@ -1,3 +1,4 @@
 from django.contrib import admin
+from madadju.models import Madadju
 
-# Register your models here.
+admin.site.register(Madadju)

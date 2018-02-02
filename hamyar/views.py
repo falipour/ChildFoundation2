@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from .models import Hamyar
+from .models import Hamyar, Adapt
 from karbar.forms import SignupForm1
 from karbar.models import MyUser
 from django.shortcuts import render, redirect
@@ -76,13 +76,13 @@ class MadadjooContactView(TemplateView):
         args = {'form': form, 'text': text}
         return render(request, self.template_name, args)
 
-
-class MadadjooListView(TemplateView):
-    template_name = 'hamyar/Madadjoo_List.html'
-
-# def MadadjooListView(request):
-#     #TODO zeinab
-#     pass
+@login_required()
+def MadadjooListView(request):
+    user = request.user
+    myUser = MyUser.objects.get(user = request.user)
+    myHamyar = Hamyar.objects.get(user = MyUser)
+    list = Adapt.objects.filter(hamyar=myHamyar)
+    return render(request, 'hamyar/Madadjoo_List.html', {'list': list})
 
 
 class PayView(TemplateView):
