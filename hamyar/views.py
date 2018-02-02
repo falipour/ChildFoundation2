@@ -4,14 +4,19 @@ from django.views.generic import TemplateView
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from .models import Hamyar
-# from .forms import HamyarForm
+from karbar.forms import SignupForm1
 from karbar.models import MyUser
 from django.shortcuts import render, redirect
 from MySite.forms import ContactForm
+from .urls import *
 
 
-class HamyarHomeView(TemplateView):
-    template_name = 'hamyar/Hamyar_Home.html'
+@login_required()
+def HamyarHomeView(request):
+    return render(request, "hamyar/Hamyar_Home.html")
+
+# class HamyarHomeView(TemplateView):
+#     template_name = 'hamyar/Hamyar_Home.html'
 
 
 class HamyarGoalsView(TemplateView):
@@ -75,6 +80,10 @@ class MadadjooContactView(TemplateView):
 class MadadjooListView(TemplateView):
     template_name = 'hamyar/Madadjoo_List.html'
 
+# def MadadjooListView(request):
+#     #TODO zeinab
+#     pass
+
 
 class PayView(TemplateView):
     template_name = 'hamyar/Pay.html'
@@ -96,18 +105,29 @@ def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('home'))
 
-# @login_required
-# def edit_profile(request):
-#     user = request.user
-#     user_form = HamyarForm(instance=user)
-#     if request.user.is_authenticated:
-#         if request.method == 'POST':
-#             user_form = HamyarForm(request.POST, instance=request.user)
-#             hamyar = Hamyar.objects.get(user=request.user)
-#             if user_form.is_valid():
-#                 user_form.save()
-#                 hamyar.user = user
-#                 hamyar.report_method = request.POST.get('report-method')
-#                 hamyar.save()
-#                 return HttpResponseRedirect(reverse('site:manager:account'))
-#         return render(request, 'hamyar/Edit_Profile.html', {'user': user, 'form': user_form})
+@login_required
+def edit_profile(request):
+    user = request.user
+    user_form = SignupForm1(instance=user)
+    myUser = MyUser.objects.get(user=request.user)
+    hamyar = Hamyar.objects.get(user=myUser)
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            user_form = SignupForm1(request.POST, instance=request.user)
+            # myUser = MyUser.objects.get(user=request.user)
+            if user_form.is_valid():
+                print("valid")
+                user_form.save()
+                myUser.user = request.user
+                myUser.phone_number = request.POST.get('phone_number')
+                myUser.national_id = request.POST.get('national_id')
+                myUser.country = request.POST.get('country')
+                myUser.city = request.POST.get('city')
+                myUser.address = request.POST.get('address')
+                myUser.postal_code = request.POST.get('postal_code')
+                hamyar.report_method = request.POST.get('report_method')
+                myUser.save()
+                hamyar.save()
+                return render(request, 'hamyar/Hamyar_Home.html', {'user': user}) #TODO zeinab
+                # return HttpResponseRedirect(reverse('hamyar-home'), {'user': user})
+    return render(request, 'hamyar/Edit_Profile.html', {'user': user, 'myUser': myUser, 'hamyar':hamyar})

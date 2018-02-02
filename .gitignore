@@ -10,3 +10,4 @@ MySite/__pycache__/forms.cpython-36.pyc
 *.pyc
 modir/__pycache__/views.cpython-36.pyc
 db.sqlite3
+db.sqlite3
